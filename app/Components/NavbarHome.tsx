@@ -6,18 +6,19 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import Link from "next/link";
 import { Bounce} from "react-awesome-reveal";
 import { Playfair_Display } from "next/font/google";
-import { useSelector, useDispatch } from "react-redux";
+
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
-const Navbar2 = () => {
+const NavbarHome = () => {
   const [nav, setNav] = useState(false);
 
-  const cart = useSelector((state: any) => state.cart);
+
   return (
     <div className="flex items-center justify-between w-[100%] h-auto bg-white text-black py-5 px-6 md:px-10 fixed top-0 z-20 space-y-2">
       <p
-        className={`w-1/3 text-lg [#4CAF50]  md:text-2xl text-[42px] italic ${playfair.className}`}
+        className={`w-1/3  leading-7 font-semibold  text-[#2C6A2F]
+          text-xl nd:text-[42px] italic ${playfair.className}`}
       >
         Food Court
       </p>
@@ -25,7 +26,7 @@ const Navbar2 = () => {
       <div className="w-2/3 flex justify-around items-center space-x-12">
         <ul className="hidden  md:flex justify-between items-center gap-10 text-base">
           <Link href="/">
-            <li className="hover:text-[background: cursor-pointer">Home</li>
+            <li className="hover:text-[#4CAF50]  cursor-pointer">Home</li>
           </Link>
 
           {/* <Link href="/">
@@ -47,9 +48,10 @@ const Navbar2 = () => {
 
         <Link href="/" className="w-auto">
           <Bounce>
-            <Link href="/cart"><button className=" w-auto h-12 px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]   hover:text-white hover:border-0">
-              Add To Cart {cart.length}
-            </button>
+            <Link href="/my-account">
+              <button className="w-32 h-12 px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]   hover:text-white hover:border-0">
+                Sign In
+              </button>
             </Link>
           </Bounce>
         </Link>
@@ -100,4 +102,4 @@ const Navbar2 = () => {
     </div>
   );
 };
-export default Navbar2;
+export default NavbarHome;

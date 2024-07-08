@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 
-import BackToTopButton from "./BackToTop";
 import { Bounce } from "react-awesome-reveal";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,15 +25,15 @@ const Landing = () => {
           </p>
           <br />
           <br />
-          <div className=" flex items-center justify-center">
+          <div className=" flex items-center justify-center md:gap-10">
             <a href="/buy" className=" w-auto  ">
-              <button className="px-8 py-2 me-2  bg-[#0a9230] text-white hover:bg-lime-200 hover:text-[#20a245]  border-white rounded-3xl">
+              <button className="w-[170px] h-[64px] border-[1.5px] px-8 py-2 me-2  bg-[#0a9230] text-white hover:bg-lime-200 hover:text-[#20a245]  border-white rounded-full">
                 Get Started
               </button>
             </a>
 
             <a href="/buy" className="w-auto">
-              <button className="px-8 py-2 me-2  bg-white text-[#20a245] hover:bg-lime-200 hover:text-bg-[#20a245]   border-[#20a245] rounded-3xl bg-transparent">
+              <button className="w-[170px] h-[64px] px-8 py-2 me-2  bg-transparent  hover:bg-lime-200  hover:text-[#20a245] border-[1.5px]  border-black hover:border-white rounded-full">
                 More Menu
               </button>
             </a>
