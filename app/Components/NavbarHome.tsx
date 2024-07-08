@@ -58,7 +58,7 @@ const NavbarHome = () => {
       </div>
 
       {nav && (
-        <div className="md:hidden justify-between items-center gap-8 absolute  top-16 lg:top-14 left-0 bg-gray-900 w-full h-60 p-6 space-y-6 text-lg text-white">
+        <div className="md:hidden justify-between items-center gap-8 absolute  top-20 lg:top-14 left-0 bg-gray-900 w-full h-60 p-6 space-y-6 text-lg text-white">
           <ul>
             <div className="space-y-20 gap-6 ">
               <Link href="/">

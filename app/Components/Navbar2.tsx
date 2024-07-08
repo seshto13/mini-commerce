@@ -4,7 +4,7 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Link from "next/link";
-import { Bounce} from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal";
 import { Playfair_Display } from "next/font/google";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -48,16 +48,17 @@ const Navbar2 = () => {
 
         <Link href="/" className="w-auto">
           <Bounce>
-            <Link href="/cart"><button className=" w-auto h-12 px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]   hover:text-white hover:border-0">
-               Cart {cart.length}
-            </button>
+            <Link href="/cart">
+              <button className=" w-auto h-12 px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]   hover:text-white hover:border-0">
+                Cart {cart.length}
+              </button>
             </Link>
           </Bounce>
         </Link>
       </div>
 
       {nav && (
-        <div className="md:hidden justify-between items-center gap-8 absolute  top-16 lg:top-14 left-0 bg-gray-900 w-full h-60 p-6 space-y-6 text-lg text-white">
+        <div className="md:hidden justify-between items-center gap-8 absolute  top-20 lg:top-14 left-0 bg-gray-900 w-full h-60 p-6 space-y-6 text-lg text-white">
           <ul>
             <div className="space-y-20 gap-6 ">
               <Link href="/">
