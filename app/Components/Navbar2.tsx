@@ -19,7 +19,7 @@ const Navbar2 = () => {
     <div className="flex items-center justify-between w-[100%] h-auto bg-white text-black py-5 px-6 md:px-10 fixed top-0 z-20 space-y-2">
       <p
         className={`w-1/3  leading-7 font-semibold  text-[#2C6A2F]
-        text-xl md:text-2xl italic ${playfair.className}`}
+        text-base md:text-xl lg:text-2xl italic ${playfair.className}`}
       >
         Food Court
       </p>
