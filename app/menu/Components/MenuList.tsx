@@ -11,7 +11,7 @@ export const menu = [
   {
     id: 1,
     img: meal1,
-    price: 5000.0,
+    price: 7000.0,
     mainTitle: "Rice Noodles",
     content: "Made with vanilla, strawberry and other ingredients.",
   },
