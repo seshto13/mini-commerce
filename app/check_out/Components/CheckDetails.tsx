@@ -12,7 +12,7 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const CheckDetails = () => {
   return (
-    <div className="md:flex w-full justify-around mt-24 p-8 my-6">
+    <div className="md:flex w-full justify-around mt-12 mb-12 lg:mt-16 p-8 m-3 ">
       <div className="md:w-2/6 h-auto py-8 text-black ">
         <h2
           className={`text-5xl md:text-7xl font-medium text-[#4CAF50] ${playfair.className}`}
@@ -32,6 +32,7 @@ const CheckDetails = () => {
         <CartButton />
       </div>
       <CheckImage />
+      <br /><br />
     </div>
   );
 };

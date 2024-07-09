@@ -51,7 +51,7 @@ const CheckImage = () => {
           width={200}
           height={200}
           alt="Picture of the author"
-          className="w-[541px] h-[406px] absolute top-0 left-0"
+          className="w-[1000px] md:w-[541px] h-[406px] absolute -top-10 md:top-0 left-10 lg:left-0"
         />
       </div>
     </div>
