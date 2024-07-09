@@ -54,10 +54,10 @@ const NavbarHome = () => {
             <li className="hover:text-[#4ECB71]  cursor-pointer">Pages</li>
           </Link> */}
 
-          <Link href="/check_out ">
+          <Link href="/checkout ">
             <li
               className={
-                currentPath === "/check_out"
+                currentPath === "/checkout"
                   ? "text-[#4CAF50]"
                   : "hover:text-[#4CAF50] cursor-pointer"
               }
@@ -83,7 +83,15 @@ const NavbarHome = () => {
           <ul>
             <div className="space-y-20 gap-6 ">
               <Link href="/">
-                <li className="hover:text-[#4CAF50]  cursor-pointer">Home </li>
+              <li
+              className={
+                currentPath === "/"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Home
+            </li>
               </Link>
 
               {/* <Link href="/">
@@ -91,17 +99,31 @@ const NavbarHome = () => {
               </Link> */}
 
               <Link href="/menu">
-                <li className="hover:text-[#81B440] cursor-pointer">Menu</li>
+              <li
+              className={
+                currentPath === "/menu"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Menu
+            </li>
               </Link>
 
               {/* <Link href="/">
                 <li className="hover:text-[#81B440] cursor-pointer">Pages</li>
               </Link> */}
 
-              <Link href="/check_out">
-                <li className="hover:text-[#81B440] cursor-pointer">
-                  Checkout
-                </li>
+              <Link href="/checkout">
+              <li
+              className={
+                currentPath === "/checkout"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Checkout
+            </li>
               </Link>
             </div>
           </ul>

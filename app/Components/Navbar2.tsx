@@ -52,10 +52,10 @@ const Navbar2 = () => {
             </li>
           </Link>
 
-          <Link href="/check_out ">
+          <Link href="/checkout ">
             <li
               className={
-                currentPath === "/check_out"
+                currentPath === "/checkout"
                   ? "text-[#4CAF50]"
                   : "hover:text-[#4CAF50] cursor-pointer"
               }
@@ -73,7 +73,8 @@ const Navbar2 = () => {
                 <FaCartShopping />
                 {""}
               </div>
-              <div className="">{cart.length}</div>
+              {/* <div className="">{cart.length}</div> */}
+              <p>0</p>
             </Link>
           </Bounce>
         </Link>
@@ -107,14 +108,14 @@ const Navbar2 = () => {
                 </li>
               </Link>
 
-              <Link href="/check_out">
-                <li
-                  className={
-                    currentPath === "/check_out"
-                      ? "text-[#4CAF50]"
-                      : "hover:text-[#4CAF50] cursor-pointer"
-                  }
-                >
+              <Link href="/checkout">
+              <li
+              className={
+                currentPath === "/checkout"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
                   Checkout
                 </li>
               </Link>

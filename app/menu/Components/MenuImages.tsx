@@ -42,7 +42,7 @@ function MenuImages({
         <p className="font-normal text-center text-sm mt-2 md:mt-0">
           {content}</p>
           <button
-            className="px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]  hover:text-white hover:border-0"
+            className="px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4ECB71]  hover:text-white hover:border-0"
             onClick={() =>
               dispatch(
                 addToCart({
