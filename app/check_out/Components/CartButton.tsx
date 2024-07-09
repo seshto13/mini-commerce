@@ -75,7 +75,7 @@ const CartButton = () => {
                 </button>
 
                 <p className="text-red-600 pt-2 text-xl font-medium">
-                  {" "}
+                  {""}
                   <span>&#x20A6;</span>
                   {item.price}
                 </p>
@@ -95,7 +95,7 @@ const CartButton = () => {
           <a href="">
             <button className="w-80 h-24 rounded-full border-2 px-8 py-3 bg-black text-white">
               {" "}
-             <p className="text-4xl">Buy Now</p> 
+              <p className="text-4xl">Buy Now</p>
             </button>
           </a>
         </div>

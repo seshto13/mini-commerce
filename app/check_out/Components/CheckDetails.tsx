@@ -18,7 +18,7 @@ const CheckDetails = () => {
           className={`text-5xl md:text-7xl font-medium text-black ${playfair.className}`}
         >
           Order your <br />
-          <span className="text-6xl font-light gap-3">favourite foods</span>
+          <span className="text-3xl md:text-5xl font-light gap-3">favourite foods</span>
         </h2>
         <br />
         <p className="text-base">
