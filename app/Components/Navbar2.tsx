@@ -8,10 +8,12 @@ import Link from "next/link";
 import { Bounce } from "react-awesome-reveal";
 import { Playfair_Display } from "next/font/google";
 import { useSelector, useDispatch } from "react-redux";
+import { usePathname } from "next/navigation";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const Navbar2 = () => {
+  const currentPath = usePathname();
   const [nav, setNav] = useState(false);
 
   const cart = useSelector((state: any) => state.cart);
@@ -27,28 +29,49 @@ const Navbar2 = () => {
       <div className="w-2/3 flex justify-around items-center space-x-12">
         <ul className="hidden  md:flex justify-between items-center gap-10 text-base">
           <Link href="/">
-            <li className="hover:text-[#4CAF50] cursor-pointer">Home</li>
+            <li
+              className={
+                currentPath === "/"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Home
+            </li>
           </Link>
-
-         
 
           <Link href="/menu">
-            <li className="hover:text-[#4CAF50]  cursor-pointer">Menu</li>
+            <li
+              className={
+                currentPath === "/menu"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Menu
+            </li>
           </Link>
 
-         
           <Link href="/check_out ">
-            <li className="hover:text-[#4CAF50] cursor-pointer">Checkout</li>
+            <li
+              className={
+                currentPath === "/check_out"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Checkout
+            </li>
           </Link>
         </ul>
 
         <Link href="/" className="w-auto">
           <Bounce>
             <Link href="/menu" className="flex gap-2">
-              
               <div className="text-xl">
                 {" "}
-                <FaCartShopping />{""}
+                <FaCartShopping />
+                {""}
               </div>
               <div className="">{cart.length}</div>
             </Link>
@@ -57,27 +80,41 @@ const Navbar2 = () => {
       </div>
 
       {nav && (
-       <div className="md:hidden justify-between items-center gap-8 absolute  top-[88px] lg:top-14 left-0 bg-gray-900  w-[70%] h-96 p-6 space-y-6 text-lg text-white">
+        <div className="md:hidden justify-between items-center gap-8 absolute  top-[88px] lg:top-14 left-0 bg-gray-900  w-[70%] h-96 p-6 space-y-6 text-lg text-white">
           <ul>
             <div className="space-y-20 gap-6">
               <Link href="/">
-                <li className="hover:text-[#4CAF50]  cursor-pointer">Home </li>
+                <li
+                  className={
+                    currentPath === "/"
+                      ? "text-[#4CAF50]"
+                      : "hover:text-[#4CAF50] cursor-pointer"
+                  }
+                >
+                  Home{" "}
+                </li>
               </Link>
-
-              {/* <Link href="/">
-                <li className="hover:text-[#81B440] cursor-pointer">About</li>
-              </Link> */}
 
               <Link href="/menu">
-                <li className="hover:text-[#81B440] cursor-pointer">Menu</li>
+                <li
+                  className={
+                    currentPath === "/menu"
+                      ? "text-[#4CAF50]"
+                      : "hover:text-[#4CAF50] cursor-pointer"
+                  }
+                >
+                  Menu
+                </li>
               </Link>
 
-              {/* <Link href="/">
-                <li className="hover:text-[#81B440] cursor-pointer">Pages</li>
-              </Link> */}
-
               <Link href="/check_out">
-                <li className="hover:text-[#81B440] cursor-pointer">
+                <li
+                  className={
+                    currentPath === "/check_out"
+                      ? "text-[#4CAF50]"
+                      : "hover:text-[#4CAF50] cursor-pointer"
+                  }
+                >
                   Checkout
                 </li>
               </Link>

@@ -4,15 +4,16 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Link from "next/link";
-import { Bounce} from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal";
 import { Playfair_Display } from "next/font/google";
-
+import { usePathname } from "next/navigation";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const NavbarHome = () => {
   const [nav, setNav] = useState(false);
 
+  const currentPath = usePathname();
 
   return (
     <div className="flex items-center justify-between w-[100%] h-auto bg-white text-black py-5 px-6 md:px-10 fixed top-0 z-20 space-y-2">
@@ -26,15 +27,27 @@ const NavbarHome = () => {
       <div className="w-2/3 flex justify-around items-center space-x-12">
         <ul className="hidden  md:flex justify-between items-center gap-10 text-base">
           <Link href="/">
-            <li className="hover:text-[#4CAF50]  cursor-pointer">Home</li>
+            <li
+              className={
+                currentPath === "/"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Home
+            </li>
           </Link>
 
-          {/* <Link href="/">
-            <li className="hover:text-[#4ECB71] cursor-pointer">About</li>
-          </Link> */}
-
           <Link href="/menu">
-            <li className="hover:text-[#4CAF50]  cursor-pointer">Menu</li>
+            <li
+              className={
+                currentPath === "/menu"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Menu
+            </li>
           </Link>
 
           {/* <Link href="/">
@@ -42,7 +55,15 @@ const NavbarHome = () => {
           </Link> */}
 
           <Link href="/check_out ">
-            <li className="hover:text-[#4CAF50] cursor-pointer">Checkout</li>
+            <li
+              className={
+                currentPath === "/check_out"
+                  ? "text-[#4CAF50]"
+                  : "hover:text-[#4CAF50] cursor-pointer"
+              }
+            >
+              Checkout
+            </li>
           </Link>
         </ul>
 
