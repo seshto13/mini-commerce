@@ -27,7 +27,7 @@ const CheckDetails = () => {
           it hot or cold—it’s a versatile crowd-pleaser! 
         </p>
 
-        <p className="text-2xl md:text-4xl font-medium"> Total amount:  <span>&#x20A6;</span> 7000 </p>
+        <p className="text-2xl md:text-4xl font-medium"> Total order:  <span>&#x20A6;</span> 7000 </p>
 <p>Car company</p>
 <p>3.5km from you</p>
         <CartButton />
