@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col items-center bg-[#A4A4A4]">
       <div
-        className="w-[50%] grid grid-cols-1 md:grid-cols-2 justify-around  text-black bg-[#A4A4A4]
+        className="w-full md:w-[50%] grid grid-cols-2 justify-around  text-black bg-[#A4A4A4]
 ] p-8 h-auto gap-3 space-y-4 md:space-y-2"
       >
         {/* <!-- <h3 className="footer-title">OFUBIZ</h3> --> */}

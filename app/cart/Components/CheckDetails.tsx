@@ -15,7 +15,7 @@ const CheckDetails = () => {
     <div className="md:flex w-full justify-around mt-24 p-8 my-6">
       <div className="md:w-2/6 h-auto py-8 text-black ">
         <h2
-          className={`text-8xl md:text-7xl font-medium text-green-600 ${playfair.className}`}
+          className={`text-7xl md:text-7xl font-medium text-green-600 ${playfair.className}`}
         >
           Order your <br />
           <span className="text-6xl font-light gap-3">favourite foods</span>

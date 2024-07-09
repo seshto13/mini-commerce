@@ -18,7 +18,7 @@ const NavbarHome = () => {
     <div className="flex items-center justify-between w-[100%] h-auto bg-white text-black py-5 px-6 md:px-10 fixed top-0 z-20 space-y-2">
       <p
         className={`w-1/3  leading-7 font-semibold  text-[#2C6A2F]
-           nd:text-[42px] italic ${playfair.className}`}
+           md:text-[28px] italic ${playfair.className}`}
       >
         Food Court
       </p>
@@ -58,7 +58,9 @@ const NavbarHome = () => {
       </div>
 
       {nav && (
-        <div className="md:hidden justify-between items-center gap-8 absolute  top-20 lg:top-14 left-0 bg-gray-900 w-full h-60 p-6 space-y-6 text-lg text-white">
+        <div className="md:hidden justify-between items-center gap-8 absolute  top-22
+        
+        lg:top-14 left-0 bg-gray-900 w-[70] h-screen p-6 space-y-6 text-lg text-white">
           <ul>
             <div className="space-y-20 gap-6 ">
               <Link href="/">

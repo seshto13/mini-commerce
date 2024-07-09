@@ -8,7 +8,7 @@ const playfair = Playfair_Display({subsets: ["latin"] });
 function MenuHeading() {
   return (
     <div className='w-full flex flex-col items-center justify-center'>
-        <Bounce><h2 className={` md:mt-12 text-center text-[#20a245] text-2xl text-[60px] md:text-[100px] font-normal leading-[96px]  ${playfair.className}`}>Our Meal</h2>
+        <Bounce><h2 className={` md:mt-8 text-center text-[#20a245] text-2xl text-[60px] md:text-[100px] font-normal leading-[96px]  ${playfair.className}`}>Our Meal</h2>
         </Bounce>
         <br />
         <p className="w-[80%] md:w-[50%] text-[18px] leading-6 text-center font-normal text-[#495460] DM sans"> We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
