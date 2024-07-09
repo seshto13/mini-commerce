@@ -90,8 +90,8 @@ const CartButton = () => {
         <span>&#x20A6;</span>
         {total}
       </p>
-      <div className="flex justify-end">
-        <div className="-ml-3 p-2 ">
+      <div className="flex lg:justify-end">
+        <div className="lg:-ml-3 p-2 ">
           <a href="">
             <button className="w-60 h-16 md:w-80 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white">
               {" "}
