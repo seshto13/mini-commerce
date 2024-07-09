@@ -21,7 +21,7 @@ const CheckDetails = () => {
           <span className="text-black text-4xl md:text-5xl font-light gap-3">favourite foods</span>
         </h2>
         <br />
-        <p className="text-base">
+        <p className="text-base p-2">
           Rice Noodles with shrimps ,egg ,pork, cabbage. Top it off with minced
           green onions and toasted sesame seeds for a delightful crunch. Serve
           it hot or cold—it’s a versatile crowd-pleaser! 
