@@ -22,16 +22,16 @@ const Landing = () => {
             welcoming, culinary haven.
           </p>
           <br />
-          <br />
+          
           <div className=" flex items-center justify-center md:gap-10">
             <a href="/menu" className=" w-auto  ">
-              <button className="w-[170px] h-[64px] border-[1.5px] px-8 py-2 me-2  bg-[#0a9230] text-white hover:bg-lime-200 hover:text-[#20a245]  border-white rounded-full">
+              <button className="w-36 md:w-[170px] h-14 md:h-16 border-[1.5px] px-6 py-2 me-2  bg-[#0a9230] text-white hover:bg-lime-200 hover:text-[#20a245]  border-white rounded-full">
                 Get Started
               </button>
             </a>
 
             <a href="/buy" className="w-auto">
-              <button className="w-[170px] h-[64px] px-8 py-2 me-2  bg-transparent  hover:bg-lime-200  hover:text-[#20a245] border-[1.5px]  border-black hover:border-white rounded-full">
+              <button className="w-36 md:w-[170px] h-14 md:h-16 px-6 py-2 me-2  bg-transparent  hover:bg-lime-200  hover:text-[#20a245] border-[1.5px]  border-black hover:border-white rounded-full">
                 More Menu
               </button>
             </a>
