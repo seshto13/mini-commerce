@@ -3,6 +3,7 @@
 import MenuImages from "./MenuImages";
 import MenuHeading from "./MenuHeading";
 import { menu as menu } from "./MenuList";
+import Checkbtn from "./Checkbtn";
 
 import { Slide, Zoom } from "react-awesome-reveal";
 import { useState } from "react";
@@ -17,7 +18,7 @@ const AllMenu = () => {
     console.log(cart);
   };
   return (
-    <section className="w-full md:flex justify-center items-center my-24 ">
+    <section className="w-full md:flex justify-center items-center my-24">
       <div className="md:w-[90%] h-auto md:h-auto flex  flex-col items-center justify-center text-center">
         <br />
 
@@ -38,6 +39,7 @@ const AllMenu = () => {
             );
           })}
         </div>
+        <Checkbtn />
       </div>
       
     </section>
