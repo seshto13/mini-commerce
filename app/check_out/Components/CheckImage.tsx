@@ -11,7 +11,7 @@ const CheckImage = () => {
     <div className="w-2/6 relative">
     <div className=" absolute inset-0 z-10  rounded-lg mb-8 w-full h-full object-cover">
       <div className="w-full h-auto">
-        <div className="flex flex-col items-center justify-center absolute inset-0 z-0  bg-green-500 w-[320px] h-[400px] top-[30%] md:left-10 mt-16 rounded-2xl mb-4">
+        <div className="flex flex-col items-center justify-center absolute inset-0 z-0  bg-[#4CAF50] w-[320px] h-[400px] top-[30%] md:left-10 mt-16 rounded-2xl mb-4">
 <br />
           <div className="flex items-center justify-center gap-8 mt-24">
           <div className="w-6">
@@ -40,7 +40,7 @@ const CheckImage = () => {
           <p className="text-white text-lg ">Noodles 4.5</p>
           <br />
           <div className="">
-            <button className="w-64 h-14 px-6 py-3 md:py-2 me-2  bg-black text-white border-2 border-gray-500 rounded-3xl hover:bg-green-600  hover:text-white hover:border-0">
+            <button className="w-64 h-14 px-6 py-3 md:py-2 me-2  bg-black text-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]  hover:text-white hover:border-0">
               10-15mins
             </button>
           </div>

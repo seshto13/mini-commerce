@@ -27,21 +27,16 @@ const Navbar2 = () => {
       <div className="w-2/3 flex justify-around items-center space-x-12">
         <ul className="hidden  md:flex justify-between items-center gap-10 text-base">
           <Link href="/">
-            <li className="hover:text-[background: cursor-pointer">Home</li>
+            <li className="hover:text-[#4CAF50] cursor-pointer">Home</li>
           </Link>
 
-          {/* <Link href="/">
-            <li className="hover:text-[#4ECB71] cursor-pointer">About</li>
-          </Link> */}
+         
 
           <Link href="/menu">
             <li className="hover:text-[#4CAF50]  cursor-pointer">Menu</li>
           </Link>
 
-          {/* <Link href="/">
-            <li className="hover:text-[#4ECB71]  cursor-pointer">Pages</li>
-          </Link> */}
-
+         
           <Link href="/check_out ">
             <li className="hover:text-[#4CAF50] cursor-pointer">Checkout</li>
           </Link>
@@ -50,7 +45,7 @@ const Navbar2 = () => {
         <Link href="/" className="w-auto">
           <Bounce>
             <Link href="/menu" className="flex gap-2">
-              {/* <button className=" w-auto h-12 px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]   hover:text-white hover:border-0"> */}
+              
               <div className="text-xl">
                 {" "}
                 <FaCartShopping />{""}
