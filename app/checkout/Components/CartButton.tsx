@@ -32,7 +32,7 @@ const CartButton = () => {
       <div className="h-6 w-[1px]  bg-black text-black"></div>
       <p>2</p>
       <div className="h-6 w-[1px]  bg-black text-black"></div>
-      <p>1</p>
+      <p>-</p>
      </div>
      <br />
       
