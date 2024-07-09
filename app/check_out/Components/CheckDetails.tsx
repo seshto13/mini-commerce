@@ -13,12 +13,12 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 const CheckDetails = () => {
   return (
     <div className="md:flex w-full justify-around mt-24 p-8 my-6">
-      <div className="md:w-2/6 h-auto py-8 bg-[#4CAF50]">
+      <div className="md:w-2/6 h-auto py-8 text-black ">
         <h2
-          className={`text-6xl md:text-7xl font-medium text-black ${playfair.className}`}
+          className={`text-6xl md:text-7xl font-medium text-[#4CAF50] ${playfair.className}`}
         >
           Order your <br />
-          <span className="text-3xl md:text-5xl font-light gap-3">favourite foods</span>
+          <span className="text-black text-5xl font-light gap-3">favourite foods</span>
         </h2>
         <br />
         <p className="text-base">

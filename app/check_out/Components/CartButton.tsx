@@ -93,9 +93,9 @@ const CartButton = () => {
       <div className="flex justify-end">
         <div className="-ml-3 p-2 ">
           <a href="">
-            <button className="w-80 h-24 rounded-full border-2 px-8 py-3 bg-black text-white">
+            <button className="w-60 h-16 md:w-80 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white">
               {" "}
-              <p className="text-4xl">Buy Now</p>
+              <p className="text-2xl md:text-4xl">Buy Now</p>
             </button>
           </a>
         </div>
