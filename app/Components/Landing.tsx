@@ -9,7 +9,7 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 const Landing = () => {
   return (
     <div className="w-full h-screen px-4 my-4">
-      <div className="w-full h-screen bg-[url('/assets/meals/image1.png')] bg-cover bg-center flex items-center  justify-center bg-transparent bg-opacity">
+      <div className="w-full h-screen bg-[url('/assets/images/image11.jpg')] bg-cover bg-center flex items-center  justify-center bg-transparent bg-opacity">
         <div className=" text-center ">
          <Bounce> <p className={`text-[50px] lg:px-52 font-medium ${playfair.className}`}>
             Get Your Favourite <br />

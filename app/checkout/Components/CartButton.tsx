@@ -27,7 +27,7 @@ const CartButton = () => {
         
         <span className=" text-green-500">{quantity}</span>
         <button
-          className=" text-green-600 rounded"
+          className=" text-green-600 rounded "
           onClick={increaseQuantity}
         >
           +
