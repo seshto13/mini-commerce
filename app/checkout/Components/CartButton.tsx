@@ -1,40 +1,40 @@
 "use client";
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 
-import {
-  addToCart,
-  incrementQuantity,
-  decrementQuantity,
-} from "@/app/redux/reducer";
-
-interface CartItem {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-}
 
 const CartButton = () => {
-  const cart = useSelector((state: any) => state.cart);
-  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1); // Initial quantity
 
-  //if (cart.length > 0) {
-  const total = cart
-    .map((item: any) => item.quantity * item.price)
-    .reduce((prev: number, curr: number) => prev + curr, 0);
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
  
   return (
-    <div className="md:flex container mx-auto px-2 py-8">
-      
-     <div className="flex items-center justify-center w-40 h-16 text-green-600 border-[1.5px] border-gray-400 rounded-full text-center text-2xl gap-4">
-      <p>+</p> 
-      <div className="h-6 w-[1px]  bg-black text-black"></div>
-      <p>2</p>
-      <div className="h-6 w-[1px]  bg-black text-black"></div>
-      <p>-</p>
-     </div>
-     <br />
+    <div className="md:flex items-center justify-center container mx-auto px-2 py-8">
+      <div className="w-56 h-12 px-3 md:w-72 md:h-12 border-2 borer-gray-900 flex items-center justify-between gap- rounded-full">
+      <button
+          className=" text-green-500  rounded"
+          onClick={decreaseQuantity}
+        >
+          -
+        </button>
+        
+        <span className=" text-green-500">{quantity}</span>
+        <button
+          className=" text-green-600 rounded"
+          onClick={increaseQuantity}
+        >
+          +
+        </button>
+        </div>
+        
+     
       
       <div className="flex lg:justify-end">
         <div className="lg:-ml-3 p-2 ">
