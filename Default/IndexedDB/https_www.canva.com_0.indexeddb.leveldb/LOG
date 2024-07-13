@@ -1,0 +1,6 @@
+2024/07/13-20:16:59.171 8803 Creating DB /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/IndexedDB/https_www.canva.com_0.indexeddb.leveldb since it was missing.
+2024/07/13-20:16:59.239 8803 Reusing MANIFEST /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/IndexedDB/https_www.canva.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/07/13-20:19:23.959 8803 Level-0 table #5: started
+2024/07/13-20:19:23.999 8803 Level-0 table #5: 98906 bytes OK
+2024/07/13-20:19:24.035 8803 Delete type=0 #3
+2024/07/13-20:19:24.037 8803 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

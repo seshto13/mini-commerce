@@ -1,0 +1,6 @@
+2024/07/13-18:14:18.576 8803 Creating DB /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/WebStorage/3/IndexedDB/indexeddb.leveldb since it was missing.
+2024/07/13-18:14:18.639 8803 Reusing MANIFEST /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/WebStorage/3/IndexedDB/indexeddb.leveldb/MANIFEST-000001
+2024/07/13-18:14:28.248 6507 Level-0 table #5: started
+2024/07/13-18:14:28.278 6507 Level-0 table #5: 480 bytes OK
+2024/07/13-18:14:28.326 6507 Delete type=0 #3
+2024/07/13-18:14:28.344 6507 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

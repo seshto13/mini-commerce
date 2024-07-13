@@ -4,31 +4,37 @@ import MenuImages from "./MenuImages";
 import MenuHeading from "./MenuHeading";
 import { menu as menu } from "./MenuList";
 import Checkbtn from "./Checkbtn";
+import Link from "next/link";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 import { Slide, Zoom } from "react-awesome-reveal";
 import { use, useEffect, useState } from "react";
-import axios from "axios";
-import useSWR from "swr";
+import { CirclesWithBar } from "react-loader-spinner";
 
 const AllMenu = () => {
   const [cart, setCart] = useState<any[]>([]);
-  const [data, setData] = useState();
-  const [items, setItems] = useState<any[]>([]);
+  const [data, setData] = useState<any>({});
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
 
-  useEffect(() => {
+  function fetchMenus(page: number) {
+    setLoading(true);
+    setData({});
     fetch(
-      `https://api.timbu.cloud/products?organization_id=21bdf1acfdb649ab955b44826fc5c103&reverse_sort=false&page=1&size=10&Appid=F3LHGQ64ZGP2HTD&Apikey=ec9b7ff977c44f858461a2643056483b20240712141205421887`
+      `https://api.timbu.cloud/products?organization_id=21bdf1acfdb649ab955b44826fc5c103&reverse_sort=false&page=${page}&size=10&Appid=F3LHGQ64ZGP2HTD&Apikey=ec9b7ff977c44f858461a2643056483b20240712141205421887`
     )
       .then((res) => res.json())
       .then((response) => {
-        console.log("data is " + response);
+        console.log(response);
 
         setData(response);
-        console.log(data);
-        setItems(response.items);
-        console.log(response.items[0].photos[0].url);
-        // setLoading(false)
+        setLoading(false);
       });
+  }
+
+  useEffect(() => {
+    fetchMenus(1);
   }, []);
 
   const addToCart = (item: any) => {
@@ -44,21 +50,131 @@ const AllMenu = () => {
 
         <MenuHeading />
 
+        <div className=" flex justify-center items-center">
+          {" "}
+          {loading && (
+            <CirclesWithBar
+              height="100"
+              width="100"
+              color="#4fa94d"
+              outerCircleColor="#4fa94d"
+              innerCircleColor="#4fa94d"
+              barColor="#4fa94d"
+              ariaLabel="circles-with-bar-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
+          )}
+        </div>
+
         <div className="w-[90%] md:w-full grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-4 gap-y-6 justify-center items-center">
-          {items.map((item) => {
-            return (
-              <MenuImages
-                key={item.id}
-                id={item.id}
-                //img="https://api.timbu.cloud/images/food-store/product_pasta_e27ec1_1.jpg"
-                img={"https://api.timbu.cloud/images/" + item?.photos[0]?.url}
-                Price={item.current_price[0].NGN}
-                mainTitle={item.name}
-                content={item.description}
-                callback={addToCart}
-              />
-            );
-          })}
+          {data &&
+            Object.keys(data).length !== 0 &&
+            data?.items.map((item: any) => {
+              return (
+                <MenuImages
+                  key={item.id}
+                  id={item.id}
+                  //img="https://api.timbu.cloud/images/food-store/product_pasta_e27ec1_1.jpg"
+                  img={"https://api.timbu.cloud/images/" + item?.photos[0]?.url}
+                  Price={item.current_price[0].NGN}
+                  mainTitle={item.name}
+                  content={item.description}
+                  callback={addToCart}
+                />
+              );
+            })}
+        </div>
+        <div>
+          {data && Object.keys(data).length !== 0 && (
+            <div className="flex justify-center items-center">
+              <div className="flex gap-5 justify-center items-center">
+                {data.page === 1 ? (
+                  <button disabled className=" p-2">
+                    {" "}
+                    <IoIosArrowBack />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => fetchMenus(data.page - 1)}
+                    className="hover:bg-black hover:text-white p-2"
+                  >
+                    <IoIosArrowBack />
+                  </button>
+                )}
+
+                <div className="flex gap-3 p-">
+                  {data.page === 1 || data.page - 2 < 1 ? (
+                    ""
+                  ) : (
+                    <button
+                      className="hover:bg-black hover:text-white p-2"
+                      onClick={() => fetchMenus(data.page - 2)}
+                    >
+                      {data.page - 2}
+                    </button>
+                  )}
+                </div>
+
+                {data.page === 1 ? (
+                  ""
+                ) : (
+                  <button
+                    className="hover:bg-black hover:text-white p-2"
+                    onClick={() => fetchMenus(data.page - 1)}
+                  >
+                    {data.page - 1}
+                  </button>
+                )}
+
+                <button disabled className=" bg-black text-white p-2">
+                  {data.page}
+                </button>
+
+                {data.page ===
+                Math.ceil(parseFloat(data.total) / parseFloat(data.size)) ? (
+                  ""
+                ) : (
+                  <button
+                    onClick={() => fetchMenus(data.page + 1)}
+                    className="hover:bg-black hover:text-white p-2"
+                  >
+                    {data.page + 1}
+                  </button>
+                )}
+
+                {data.page ===
+                  Math.ceil(parseFloat(data.total) / parseFloat(data.size)) ||
+                data.page + 2 >
+                  Math.ceil(parseFloat(data.total) / parseFloat(data.size)) ? (
+                  ""
+                ) : (
+                  <button
+                    onClick={() => fetchMenus(data.page + 2)}
+                    className="hover:bg-black hover:text-white p-2"
+                  >
+                    {data.page + 2}
+                  </button>
+                )}
+
+                {data.page >=
+                Math.ceil(parseFloat(data.total) / parseFloat(data.size)) ? (
+                  <button disabled className=" p-2">
+                    {" "}
+                    <IoIosArrowForward />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => fetchMenus(data.page + 1)}
+                    className="hover:bg-black hover:text-white p-2"
+                  >
+                    <IoIosArrowForward />
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
         </div>
         <Checkbtn />
       </div>

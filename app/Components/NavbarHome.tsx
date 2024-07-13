@@ -50,14 +50,16 @@ const NavbarHome = () => {
             </li>
           </Link>
 
+         
+
           {/* <Link href="/">
             <li className="hover:text-[#4ECB71]  cursor-pointer">Pages</li>
           </Link> */}
 
-          <Link href="/checkout ">
+          <Link href="/check_out ">
             <li
               className={
-                currentPath === "/checkout"
+                currentPath === "/check_out"
                   ? "text-[#4CAF50]"
                   : "hover:text-[#4CAF50] cursor-pointer"
               }
@@ -67,7 +69,7 @@ const NavbarHome = () => {
           </Link>
         </ul>
 
-        <Link href="/" className="w-auto">
+        
           <Bounce>
             <Link href="/my-account">
               <button className="w-32 h-12 px-4 py-1 md:py-2 me-2  bg-white border-2 border-gray-500 rounded-3xl hover:bg-[#4CAF50]   hover:text-white hover:border-0">
@@ -75,7 +77,7 @@ const NavbarHome = () => {
               </button>
             </Link>
           </Bounce>
-        </Link>
+       
       </div>
 
       {nav && (
@@ -110,14 +112,12 @@ const NavbarHome = () => {
             </li>
               </Link>
 
-              {/* <Link href="/">
-                <li className="hover:text-[#81B440] cursor-pointer">Pages</li>
-              </Link> */}
+            
 
-              <Link href="/checkout">
+              <Link href="/check_out">
               <li
               className={
-                currentPath === "/checkout"
+                currentPath === "/check_out"
                   ? "text-[#4CAF50]"
                   : "hover:text-[#4CAF50] cursor-pointer"
               }

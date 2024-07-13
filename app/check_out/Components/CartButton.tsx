@@ -21,7 +21,7 @@ const CartButton = () => {
 
   //if (cart.length > 0) {
   const total = cart
-    .map((item: any) => item.quantity * item.price)
+    .map((item: any) => parseFloat(item.quantity) * parseFloat(item.price))
     .reduce((prev: number, curr: number) => prev + curr, 0);
   // }
   /*const [cart, setCart] = useState<CartItem[]>([
@@ -84,16 +84,19 @@ const CartButton = () => {
           ))}
         </>
       )}
-      Total amount :{" "}
+      <div className="flex gap-3 justify-center items-center">
+      <p></
       <p className="text-red-600 pt-2 text-xl font-medium">
+      
         {" "}
         <span>&#x20A6;</span>
         {total}
       </p>
+      </div>
       <div className="flex lg:justify-end">
         <div className="lg:-ml-3 p-2 ">
           <a href="">
-            <button className="w-60 h-16 md:w-80 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white">
+            <button className="w-40 h-10 md:w-60 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white hover:bg-green-500">
               {" "}
               <p className="text-2xl md:text-4xl">Buy Now</p>
             </button>

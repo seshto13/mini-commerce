@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/app/redux/reducer";
+import Link from "next/link";
 
 function MenuImages({
   id,
@@ -40,7 +41,7 @@ function MenuImages({
           {Price}
         </p>
         <p className="text-[20px] font-bold">{mainTitle}</p>
-        <p className="font-normal text-center text-sm mt-2 md:mt-0">
+        <p className="font-normal text-center text-xs mt-2 md:mt-0">
           {content}
         </p>
         <button
@@ -53,19 +54,21 @@ function MenuImages({
                 price: Price,
                 mainTitle: mainTitle,
                 content: content,
+                quantity: 1,
               })
             )
           }
         >
           Add to Cart
         </button>
+
+        <Link href={"menu/" + id}>View </Link>
         <br />
 
         <div className="absolute bottom-0 right-0 size-8 bg-green text-white flex items-center justify-center rounded-tl-lg rounded-br-lg"></div>
       </div>
-      
-        <br />
-     
+
+      <br />
     </div>
   );
 }

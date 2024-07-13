@@ -52,6 +52,8 @@ const Navbar2 = () => {
             </li>
           </Link>
 
+          
+
           <Link href="/check_out ">
             <li
               className={
@@ -65,9 +67,9 @@ const Navbar2 = () => {
           </Link>
         </ul>
 
-        <Link href="/" className="w-auto">
+      
           <Bounce>
-            <Link href="/menu" className="flex gap-2">
+            <Link href="/check_out" className="flex gap-2">
               <div className="text-xl">
                 {" "}
                 <FaCartShopping />
@@ -77,7 +79,7 @@ const Navbar2 = () => {
               <div className="">{cart.length}</div>
             </Link>
           </Bounce>
-        </Link>
+        
       </div>
 
       {nav && (
@@ -107,6 +109,9 @@ const Navbar2 = () => {
                   Menu
                 </li>
               </Link>
+
+
+        
 
               <Link href="/check_out">
                 <li

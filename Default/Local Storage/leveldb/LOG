@@ -1,2 +1,32 @@
 2024/07/12-17:47:54.058 2c03 Creating DB /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/Local Storage/leveldb since it was missing.
 2024/07/12-17:47:54.166 2c03 Reusing MANIFEST /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/Local Storage/leveldb/MANIFEST-000001
+2024/07/13-17:30:58.070 4e03 Level-0 table #5: started
+2024/07/13-17:30:58.203 4e03 Level-0 table #5: 58295 bytes OK
+2024/07/13-17:30:58.242 4e03 Delete type=0 #3
+2024/07/13-18:13:46.936 4e03 Level-0 table #7: started
+2024/07/13-18:13:46.976 4e03 Level-0 table #7: 72367 bytes OK
+2024/07/13-18:13:47.053 4e03 Delete type=0 #4
+2024/07/13-18:17:09.050 4e03 Level-0 table #9: started
+2024/07/13-18:17:09.094 4e03 Level-0 table #9: 37396 bytes OK
+2024/07/13-18:17:09.144 4e03 Delete type=0 #6
+2024/07/13-18:29:49.898 4e03 Level-0 table #11: started
+2024/07/13-18:29:49.926 4e03 Level-0 table #11: 65414 bytes OK
+2024/07/13-18:29:49.953 4e03 Delete type=0 #8
+2024/07/13-20:10:07.175 2c03 Level-0 table #13: started
+2024/07/13-20:10:07.268 2c03 Level-0 table #13: 75724 bytes OK
+2024/07/13-20:10:07.311 2c03 Delete type=0 #10
+2024/07/13-20:19:44.369 4e03 Level-0 table #15: started
+2024/07/13-20:19:44.401 4e03 Level-0 table #15: 45729 bytes OK
+2024/07/13-20:19:44.422 4e03 Delete type=0 #12
+2024/07/13-20:19:44.424 2c03 Compacting 4@0 + 1@1 files
+2024/07/13-20:19:44.456 2c03 Generated table #16@0: 145 keys, 58477 bytes
+2024/07/13-20:19:44.456 2c03 Compacted 4@0 + 1@1 files => 58477 bytes
+2024/07/13-20:19:44.479 2c03 compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/07/13-20:19:44.481 2c03 Delete type=2 #15
+2024/07/13-20:19:44.481 2c03 Delete type=2 #7
+2024/07/13-20:19:44.482 2c03 Delete type=2 #13
+2024/07/13-20:19:44.482 2c03 Delete type=2 #11
+2024/07/13-20:19:44.482 2c03 Delete type=2 #9
+2024/07/13-20:22:34.327 2c03 Level-0 table #18: started
+2024/07/13-20:22:34.371 2c03 Level-0 table #18: 274570 bytes OK
+2024/07/13-20:22:34.403 2c03 Delete type=0 #14
