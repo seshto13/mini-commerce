@@ -8,9 +8,9 @@ import img1 from "../../../public/assets/meals/meal1.svg";
 
 const CheckImage = () => {
   return (
-    <div className="w-2/6 relative">
-    <div className=" absolute inset-0 z-10  rounded-lg mb-8 w-full h-full object-cover">
-      <div className="flex items-center justify-center md:flex-none w-full h-auto">
+    <div className="w-2/6 md:h-[700px] relative mb-4">
+    <div className=" absolute inset-0 z-10  rounded-lg mb-8 w-full object-cover">
+      <div className="flex items-center justify-center md:flex-none w-full ">
         <div className="flex flex-col items-center justify-center absolute inset-0 z-0  bg-[#4CAF50] w-[300px] md:w-[320px] h-[400px] top-[30%] md:left-10 mt-16 rounded-2xl mb-4">
 <br />
           <div className="flex items-center justify-center gap-8 mt-24">

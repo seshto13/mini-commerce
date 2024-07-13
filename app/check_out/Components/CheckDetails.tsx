@@ -32,6 +32,7 @@ const CheckDetails = () => {
 <p>3.5km from you</p>
         <CartButton />
       </div>
+      
       <CheckImage />
       <br /><br />
     </div>

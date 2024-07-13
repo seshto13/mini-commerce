@@ -11,7 +11,6 @@ const page = () => {
       <Provider store={store}>
         <Navbar2 />
         <CheckDetails />
-       
       </Provider>
     </div>
   );

@@ -52,10 +52,10 @@ const Navbar2 = () => {
             </li>
           </Link>
 
-          <Link href="/checkout ">
+          <Link href="/check_out ">
             <li
               className={
-                currentPath === "/checkout"
+                currentPath === "/check_out"
                   ? "text-[#4CAF50]"
                   : "hover:text-[#4CAF50] cursor-pointer"
               }
@@ -74,7 +74,7 @@ const Navbar2 = () => {
                 {""}
               </div>
               {/* <div className="">{cart.length}</div> */}
-              <p>0</p>
+              <div className="">{cart.length}</div>
             </Link>
           </Bounce>
         </Link>
@@ -108,10 +108,10 @@ const Navbar2 = () => {
                 </li>
               </Link>
 
-              <Link href="/checkout">
+              <Link href="/check_out">
                 <li
                   className={
-                    currentPath === "/checkout"
+                    currentPath === "/check_out"
                       ? "text-[#4CAF50]"
                       : "hover:text-[#4CAF50] cursor-pointer"
                   }
