@@ -84,19 +84,18 @@ const CartButton = () => {
           ))}
         </>
       )}
-      <div className="flex gap-3 justify-center items-center">
-      <p></
-      <p className="text-red-600 pt-2 text-xl font-medium">
-      
-        {" "}
-        <span>&#x20A6;</span>
-        {total}
-      </p>
+      <div className="flex gap-3 items-center">
+        Total amount :{" "}
+        <p className="text-red-600 pt-2 text-xl font-medium">
+          {" "}
+          <span>&#x20A6;</span>
+          {total}
+        </p>
       </div>
       <div className="flex lg:justify-end">
         <div className="lg:-ml-3 p-2 ">
           <a href="">
-            <button className="w-40 h-10 md:w-60 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white hover:bg-green-500">
+            <button className="w-40 h-14 md:w-60 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white hover:bg-green-500">
               {" "}
               <p className="text-2xl md:text-4xl">Buy Now</p>
             </button>
