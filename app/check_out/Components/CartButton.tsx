@@ -7,6 +7,7 @@ import {
   incrementQuantity,
   decrementQuantity,
 } from "@/app/redux/reducer";
+import Link from "next/link";
 
 interface CartItem {
   id: number;
@@ -94,12 +95,12 @@ const CartButton = () => {
       </div>
       <div className="flex lg:justify-end">
         <div className="lg:-ml-3 p-2 ">
-          <a href="">
+          <Link href="/my-account">
             <button className="w-40 h-14 md:w-60 md:h-24 rounded-full border-2 px-8 py-3 bg-black text-white hover:bg-green-500">
               {" "}
               <p className="text-2xl md:text-4xl">Buy Now</p>
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

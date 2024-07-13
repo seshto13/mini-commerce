@@ -16,6 +16,17 @@ const Product = ({ images }: { images: any }) => {
         alt="Picture of the author"
         className="w-full h-[300px] md:h-[350px]  "
       />
+      <div></div>
+
+      <hr />
+      <Image
+        loader={() => "https://api.timbu.cloud/images/" + images[0]?.url}
+        src={"https://api.timbu.cloud/images/" + images[0]?.url}
+        width={30}
+        height={30}
+        alt="Picture of the author"
+        className="w-full h-[50px]  md:h-[55px]  "
+      />
     </div>
   );
 };

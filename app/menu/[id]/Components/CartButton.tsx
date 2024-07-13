@@ -65,7 +65,7 @@ const CartButton = ({
       <div className="flex lg:justify-e">
         <div className="lg:-ml-3 p-2 ">
           <button
-            className="w-72 h-16 md:w-80   border-2 px-8 py- bg-green-600 text-white"
+            className="w-72 h-16 md:w-64  border-2 px-8 py- bg-green-600 text-white"
             onClick={() =>
               dispatch(
                 addToCart({

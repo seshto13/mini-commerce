@@ -38,7 +38,7 @@ const ProductDetails = () => {
   }, []);
 
   return (
-    <div className="lg:flex w-full items-center justify-between  my-16 p-8 m-3 ">
+    <div className="md:flex w-full items-center justify-between  my-16 p-8 m-3 ">
      <div className="flex justify-center items-center">
       {loading && (
         <CirclesWithBar
