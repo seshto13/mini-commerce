@@ -19,6 +19,7 @@ const Product = ({ images }: { images: any }) => {
       <div></div>
 
       <hr />
+    
       <Image
         loader={() => "https://api.timbu.cloud/images/" + images[0]?.url}
         src={"https://api.timbu.cloud/images/" + images[0]?.url}

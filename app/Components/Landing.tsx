@@ -34,7 +34,7 @@ const Landing = () => {
               </button>
             </a>
 
-            <a href="/buy" className="w-auto">
+            <a href="/menu" className="w-auto">
               <button
                 className="w-36 md:w-[170px] h-14 md:h-16 px-6 py-2 me-2  bg-transparent  hover:bg-lime-200  hover:text-bg-[#4CAF50]
 border-[1.5px]  border-black hover:border-white rounded-full"
