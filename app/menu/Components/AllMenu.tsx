@@ -22,7 +22,7 @@ const AllMenu = () => {
     setLoading(true);
     setData({});
     fetch(
-      `https://api.timbu.cloud/products?organization_id=21bdf1acfdb649ab955b44826fc5c103&reverse_sort=false&page=${page}&size=10&Appid=F3LHGQ64ZGP2HTD&Apikey=ec9b7ff977c44f858461a2643056483b20240712141205421887`
+      `https://api.timbu.cloud/products?organization_id=${process.env.ORGANISATION_ID}&reverse_sort=false&page=${page}&size=10&Appid=${process.env.AppID}&Apikey=${process.env.API_KEY}`
     )
       .then((res) => res.json())
       .then((response) => {
@@ -76,7 +76,6 @@ const AllMenu = () => {
                 <MenuImages
                   key={item.id}
                   id={item.id}
-                  //img="https://api.timbu.cloud/images/food-store/product_pasta_e27ec1_1.jpg"
                   img={"https://api.timbu.cloud/images/" + item?.photos[0]?.url}
                   Price={item.current_price[0].NGN}
                   mainTitle={item.name}

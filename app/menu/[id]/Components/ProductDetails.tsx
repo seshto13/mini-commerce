@@ -22,7 +22,7 @@ const ProductDetails = () => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://api.timbu.cloud/products/${params.id}?organization_id=21bdf1acfdb649ab955b44826fc5c103&Appid=F3LHGQ64ZGP2HTD&Apikey=ec9b7ff977c44f858461a2643056483b20240712141205421887`
+      `https://api.timbu.cloud/products/${params.id}?organization_id=${process.env.ORGANISATION_ID}&Appid=${process.env.AppID}&Apikey=${process.env.API_KEY}`
     )
       .then((res) => res.json())
       .then((response) => {
@@ -39,22 +39,22 @@ const ProductDetails = () => {
 
   return (
     <div className="md:flex w-full items-center justify-between  my-16 p-8 m-3 ">
-     <div className="flex justify-center items-center">
-      {loading && (
-        <CirclesWithBar
-          height="100"
-          width="100"
-          color="#4fa94d"
-          outerCircleColor="#4fa94d"
-          innerCircleColor="#4fa94d"
-          barColor="#4fa94d"
-          ariaLabel="circles-with-bar-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
-      )}
-</div> 
+      <div className="flex justify-center items-center">
+        {loading && (
+          <CirclesWithBar
+            height="100"
+            width="100"
+            color="#4fa94d"
+            outerCircleColor="#4fa94d"
+            innerCircleColor="#4fa94d"
+            barColor="#4fa94d"
+            ariaLabel="circles-with-bar-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        )}
+      </div>
 
       {product && Object.keys(product).length !== 0 && (
         <>
