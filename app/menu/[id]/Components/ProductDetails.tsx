@@ -9,11 +9,11 @@ import { CirclesWithBar } from "react-loader-spinner";
 //( { img, … } : { img: any, … } )
 
 import { Playfair_Display } from "next/font/google";
-import CheckImage from "./CheckImage";
+import Product from "./Product";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
-const CheckDetails = () => {
+const ProductDetails = () => {
   const params = useParams();
 
   const [product, setProduct] = useState<any>({});
@@ -38,7 +38,8 @@ const CheckDetails = () => {
   }, []);
 
   return (
-    <div className="md:flex w-full justify-around mt-12 mb-12 lg:mt-16 p-8 m-3 ">
+    <div className="lg:flex w-full items-center justify-between  my-16 p-8 m-3 ">
+     <div className="flex justify-center items-center">
       {loading && (
         <CirclesWithBar
           height="100"
@@ -53,11 +54,12 @@ const CheckDetails = () => {
           visible={true}
         />
       )}
+</div> 
 
       {product && Object.keys(product).length !== 0 && (
         <>
-          <CheckImage images={product.photos} />
-          <div className="md:w-2/6 h-auto py-8 text-black ">
+          <Product images={product.photos} />
+          <div className="w-full md:w-2/6 h-auto py-8 text-black ">
             <h2
               className={`text-5xl md:text-7xl font-medium text-[#4CAF50] ${playfair.className}`}
             ></h2>
@@ -81,4 +83,4 @@ const CheckDetails = () => {
   );
 };
 
-export default CheckDetails;
+export default ProductDetails;
