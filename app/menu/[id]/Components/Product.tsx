@@ -23,7 +23,11 @@ const Product = ({ images }: { images: any }) => {
       <div className="w-full flex gap-3 my-4">
         {images.map((item: any) => {
           return (
-            <div className=" w-8 h-8" onClick={() => setImg(item.url)}>
+            <div
+              key={item.position}
+              className=" w-8 h-8"
+              onClick={() => setImg(item.url)}
+            >
               <Image
                 loader={() => "https://api.timbu.cloud/images/" + item.url}
                 src={"https://api.timbu.cloud/images/" + item.url}
