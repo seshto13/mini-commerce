@@ -1,7 +1,0 @@
-2024/07/13-18:28:50.349 6507 Reusing MANIFEST /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/WebStorage/2/IndexedDB/indexeddb.leveldb/MANIFEST-000001
-2024/07/13-18:28:50.350 6507 Recovering log #3
-2024/07/13-18:28:50.351 6507 Reusing old log /Users/admin/Desktop/HNG-INTERN/food-delivery/Default/WebStorage/2/IndexedDB/indexeddb.leveldb/000003.log 
-2024/07/13-18:28:52.884 6507 Level-0 table #5: started
-2024/07/13-18:28:52.896 6507 Level-0 table #5: 5747 bytes OK
-2024/07/13-18:28:52.920 6507 Delete type=0 #3
-2024/07/13-18:28:52.922 6507 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
