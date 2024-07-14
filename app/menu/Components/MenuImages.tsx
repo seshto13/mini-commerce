@@ -13,11 +13,11 @@ function MenuImages({
   content,
   callback,
 }: {
-  id: any;
-  img: any;
-  Price: any;
-  mainTitle: any;
-  content: any;
+  id: string;
+  img: string;
+  Price: number;
+  mainTitle: string;
+  content: string;
   callback: Function;
 }) {
   const dispatch = useDispatch();

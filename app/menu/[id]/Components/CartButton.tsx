@@ -11,12 +11,12 @@ const CartButton = ({
   img,
   description,
 }: {
-  productName: any;
-  price: any;
-  availableQuantity: any;
-  id: any;
-  img: any;
-  description: any;
+  productName: string;
+  price: number;
+  availableQuantity: number;
+  id: string;
+  img: string;
+  description: string;
 }) => {
   const dispatch = useDispatch();
 
