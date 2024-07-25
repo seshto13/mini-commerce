@@ -12,6 +12,7 @@ const playfair = Playfair_Display({ subsets: ["latin"] });
 
 const NavbarHome = () => {
   const [nav, setNav] = useState(false);
+  
 
   const currentPath = usePathname();
 
@@ -85,15 +86,17 @@ const NavbarHome = () => {
           <ul>
             <div className="space-y-20 gap-6 ">
               <Link href="/">
-              <li
-              className={
-                currentPath === "/"
-                  ? "text-[#4CAF50]"
-                  : "hover:text-[#4CAF50] cursor-pointer"
-              }
-            >
-              Home
-            </li>
+              <div>
+                <li
+                className={
+                  currentPath === "/"
+                    ? "text-[#4CAF50]"
+                    : "hover:text-[#4CAF50] cursor-pointer"
+                }
+                            >
+                Home
+                            </li>
+              </div>
               </Link>
 
               {/* <Link href="/">
